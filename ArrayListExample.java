@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Collections;
 
 public class ArrayListExample {
 
@@ -11,8 +12,10 @@ public class ArrayListExample {
         list.add(20);
         list.add(30);
 
+        //list.si
+
         // Add an element at a specific index
-        list.add(1, 15); // Adds 15 at index 1
+        //list.add(1, 15); // Adds 15 at index 1
 
         // Display the ArrayList
         System.out.println("ArrayList: " + list); // Output: [10, 15, 20, 30]
@@ -50,7 +53,7 @@ public class ArrayListExample {
         System.out.println("Last index of 40: " + list.lastIndexOf(40));
         list.set(0, 50);
         System.out.println("ArrayList: " + list);
-        System.out.println("Sublist: " + list.subList(0, 2));
+        System.out.println("Sublist: " + list.subList(0, 0));
         list.removeAll(list);
         System.out.println("ArrayList: " + list);
         System.out.println("Is the list empty? " + list.isEmpty());
@@ -78,6 +81,38 @@ public class ArrayListExample {
         for (Object item : mixedList) {
             System.out.println(item);
         }
+
+        
+        Integer[] integers = {5, 2, 1, 4, 3};
+        List<Integer> intList = Arrays.asList(integers);
+        System.out.println("intList: " + intList);
+        Collections.sort(intList);
+        System.out.println("Sorted intList: " + intList);
+        Collections.reverse(intList);
+        System.out.println("Reversed intList: " + intList);
+        Collections.shuffle(intList);
+        System.out.println("Shuffled intList: " + intList);
+        Collections.sort(intList, Collections.reverseOrder());
+        System.out.println("Reverse sorted intList: " + intList);
+        Collections.swap(intList, 0, 4);
+        System.out.println("Swapped intList: " + intList);
+        System.out.println("Max value: " + Collections.max(intList));
+        System.out.println("Min value: " + Collections.min(intList));
+        System.out.println("Frequency of 3: " + Collections.frequency(intList, 3));
+        System.out.println("Is intList empty? " + intList.isEmpty());
+        System.out.println("Size of intList: " + intList.size());
+        System.out.println("Contains 3? " + intList.contains(3));
+        System.out.println("Index of 3: " + intList.indexOf(3));
+        System.out.println("Last index of 3: " + intList.lastIndexOf(3));
+        //#remove all elements in the list
+        intList.removeAll(intList);
+        //System.out.println("intList: " + intList);
+        //intList.clear();
+        //System.out.println("Cleared intList: " + intList);
+       //System.out.println("Is intList empty? " + intList.isEmpty());
+        //System.out.println("Size of intList: " + intList.size());
+
+        
 
         
     }

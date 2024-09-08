@@ -1,0 +1,23 @@
+       
+public static void main(String[] args)
+{
+	// creating runtime time object
+	Runtime r = Runtime.getRuntime();
+
+	// displaying max memory of heap in bytes
+	System.out.println("Max memory"
+					   + " " + r.maxMemory());
+
+	// displaying initial memory in bytes
+	System.out.println("Initial memory"
+					   + " " + r.totalMemory());
+
+	// displaying free memory in bytes
+	System.out.println("Free memory"
+					   + " " + r.freeMemory());
+
+	// displaying consume memory in bytes
+	System.out.println(
+		"Consume memory"
+		+ " " + (r.totalMemory() - r.freeMemory()));
+}
