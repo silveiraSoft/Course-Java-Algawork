@@ -1,4 +1,5 @@
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.Map;
 import java.util.HashSet;
 import java.util.List;
@@ -173,8 +174,39 @@ public class CollectionsExample {
 
         System.out.println("Sorted student1 using comparator and lanbda expresion: " + student1s);
 
+        Map<Student1,String> treeMapStudent = new TreeMap<>();
+        treeMapStudent.put(new Student1(1, "A", 21), "a");
+        treeMapStudent.put(new Student1(2, "B", 12), "b");
+        treeMapStudent.put(new Student1(3, "C", 21), "c");
+        System.out.println("****** TreeMap****");
+        treeMapStudent.forEach((key, value) -> {
+            System.out.println(key + ": " + value);
+        });  
 
+        //create a function to sort the map treeMapStudent by student age
+        Comparator<Student1> comparator5 = new Comparator<Student1>() {
+            @Override
+            public int compare(Student1 o1, Student1 o2) {
+                if(o1.getAge() > o2.getAge())
+                    return 1;
+                return -1;
+            }
+        };
 
+        
+        Map<Integer, Student1> treeMapStudent2 = new TreeMap<>();
+        treeMapStudent2.put(2,new Student1(1, "A", 21));
+        treeMapStudent2.put(3,new Student1(2, "B", 12));
+        treeMapStudent2.put(1, new Student1(3, "C", 21));
+        System.out.println("****** TreeMap2****");
+        treeMapStudent2.forEach((key, value) -> {
+            System.out.println(key + ": " + value);
+        }); 
+
+        
+        //Collections.sort(treeMapStudent2);
+
+        
         /* 
 
         System.out.println("Size of the list: " + numbers.size());

@@ -67,7 +67,7 @@ public class StreamExample {
         .map(n -> n*2).reduce(0, (c,e)-> c+e);
         System.out.println("Result10: " + result10);
 
-
+        
 
 
     }

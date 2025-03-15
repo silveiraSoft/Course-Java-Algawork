@@ -10,9 +10,13 @@ import java.util.TreeMap;
  * https://chatgpt.com/share/06b38fd8-6199-4be2-aeba-bb85d4c4f06b
  */
 
- enum Day { MONDAY, TUESDAY, WEDNESDAY }
+enum Day { MONDAY, TUESDAY, WEDNESDAY }
 
-public class Mapa {
+
+
+
+
+ public class Mapa {
     public static void main(String[] args) {
         //#create a map
         Map<String, Integer> ages = new HashMap<>();
@@ -216,12 +220,25 @@ Hashtable	No	O(1)	Yes	No	Legacy, synchronized, no nulls
         }
 
         
-        
+        Map<String, Integer> treeMap1 = new TreeMap<>();
+        treeMap1.put("banana", 2);
+        treeMap1.put("apple", 1);
+        treeMap1.put("cherry", 3);
+        System.out.println("****** TreeMap****");
+        treeMap1.forEach((key, value) -> {
+            System.out.println(key + ": " + value);
+        });
 
+
+        Map<Integer,String> treeMap2 = new TreeMap<>();
+        treeMap2.put(2, "a");
+        treeMap2.put(1, "b");
+        treeMap2.put(3, "3");
+        System.out.println("****** TreeMap****");
+        treeMap2.forEach((key, value) -> {
+            System.out.println(key + ": " + value);
+        });
+    
     }
-
-
-    
-
-    
+  
 }
